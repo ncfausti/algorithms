@@ -3,10 +3,15 @@ public class StackClient
 	public static void main(String[] args)
 	{
 		Stack<String> stack = new Stack<String>();
-		stack.push("hi");
-		stack.push("there");
 		
-		for(String s : stack)
-			StdOut.println(s);
+		while(!StdIn.isEmpty())
+		{
+			String item = StdIn.readString();
+			if (!item.equals("-"))
+				stack.push(item);
+			else if (!stack.isEmpty()) StdOut.print(stack.pop() + " ");
+		}
+
+		StdOut.println("(" + stack.size() + " left on stack)");
 	}
 }
