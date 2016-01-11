@@ -24,6 +24,7 @@ public class Stack<Item> implements Iterable<Item>
 
 	public Item pop()
 	{   // remove the item from top of stack
+		if (isEmpty()) throw new NullPointerException();
 		Item item = first.item;
 		first = first.next;
 		N--;
