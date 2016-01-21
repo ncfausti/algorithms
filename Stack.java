@@ -31,9 +31,16 @@ public class Stack<Item> implements Iterable<Item>
 		return item;
 	}
 
+	public Item peek()
+	{
+		if (isEmpty()) throw new NullPointerException();
+		Item item = first.item;
+		return item;
+	}
+
 	public Iterator<Item> iterator()
 	{ return new ListIterator(); }
-	
+
 	private class ListIterator implements Iterator<Item>
 	{
 		private Node current = first;
@@ -53,7 +60,7 @@ public class Stack<Item> implements Iterable<Item>
 	public static void main(String[] args)
 	{
 		Stack<String> stack = new Stack<String>();
-		
+
 		while(!StdIn.isEmpty())
 		{
 			String item = StdIn.readString();
