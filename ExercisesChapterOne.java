@@ -50,6 +50,7 @@ public class ExercisesChapterOne
 
     for(String s : stack)
       newStack.push(s);
+
     return newStack;
   }
 
