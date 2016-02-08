@@ -44,7 +44,7 @@ public class WeightedUnionFind
 
   public static void main(String[] args)
   {  // Solve dynamic connectivity problem on StdIn
-    StdOut.println("HI");
+
     int N = StdIn.readInt();
     WeightedUnionFind uf = new WeightedUnionFind(N);
     while (!StdIn.isEmpty())
@@ -55,7 +55,7 @@ public class WeightedUnionFind
       uf.union(p, q);
       StdOut.println(p + " " + q);
     }
-    StdOut.println("HI");
+    StdOut.println("hello2");
   //  StdOut.println(uf.count() + " components");
     uf.printList();
   }
