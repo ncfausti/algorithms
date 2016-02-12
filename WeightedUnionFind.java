@@ -39,8 +39,6 @@ public class WeightedUnionFind
     else
     count--;
   }
-  public void printList()
-  { for (int i = 0; i < 103; i++) StdOut.println("HI"); }
 
   public static void main(String[] args)
   {  // Solve dynamic connectivity problem on StdIn
@@ -55,8 +53,7 @@ public class WeightedUnionFind
       uf.union(p, q);
       StdOut.println(p + " " + q);
     }
-    StdOut.println("hello2");
-  //  StdOut.println(uf.count() + " components");
-    uf.printList();
+
+    StdOut.println(uf.count() + " components");
   }
 }
